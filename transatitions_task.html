@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            display:inline-block;
+            transition-timing-function:linear;
+            transition-duration: 4s;
+            transition-delay: 3s;
+
+        }
+        .dropdown{
+            display:none
+        }
+        .child:hover .dropdown{
+            display:block;
+            color: red;
+
+        }
+        .child>h1{
+            background-color:yellow;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <h1>courses</h1>
+            <div class="dropdown">
+                <p>DSA /Placement</p>
+                <p>GATE 2026 Prep</p>
+                <p>ML & Data Science</p>
+                <p>Cloud/Devepos</p>
+                <p>Programming language</p>
+                <p>All Courses</p>
+            </div>
+        </div>
+        <div class="child"> 
+            <h1>Tutorials</h1>
+             <div class="dropdown">
+            <p>Python</p>
+            <p>Java</p>
+            <p>DSA</p>
+            <p>ML&Datascience</p>
+            <p>interview Corner</p>
+            <p>Programming language</p>
+            <p>Web Development</p>
+            <p>GATE</p>
+            <p>CS Subjects</p>
+            <p>DevOps</p>
+            <p>School learning</p>
+            <p>Software and Tools</p>
+             </div>
+        </div>
+        <div class="child">
+            <h1>Practice</h1>
+             <div class="dropdown">
+            <p>Practice coding problems</p>
+            <p>Nation Skillup-free courses</p>
+            <p>Problem of the day</p>
+             </div>
+        </div>
+        <div class="child">
+            <h1>Jobs</h1>
+             <div class="dropdown">
+            <p>Apply now!</p>
+            <p>Post jobs</p>
+            <p>jobs Updates</p>
+             </div>
+        </div>
+    </div>
+</body>
+</html>
