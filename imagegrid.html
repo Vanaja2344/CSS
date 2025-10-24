@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seven Wonders</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden; /* ✅ Prevent scrolling */
+    }
+
+    .parent {
+      display: grid;
+      gap: 8px;
+      padding: 8px;
+      grid-template-areas: 
+        "img1 img1 img2 img3"
+        "img1 img1 img4 img5"
+        "img6 img7 img4 img5"
+        "img6 img7 img4 img5";
+    }
+
+    .parent > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      border-radius: 10px;
+      display: block;
+    }
+
+    .img1 { 
+      grid-area: img1; 
+    }
+    .img2 { 
+      grid-area: img2; 
+    }
+    .img3 { 
+      grid-area: img3; 
+    }
+    .img4 { 
+      grid-area: img4; 
+    }
+    .img5 { 
+      grid-area: img5;
+    }
+    .img6 { 
+      grid-area: img6; 
+    }
+    .img7 { 
+      grid-area: img7; 
+    }
+
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <img src="https://cdn.historycollection.com/wp-content/uploads/2019/12/13-1-1024x673.jpg" alt="Taj Mahal" class="img1">
+    <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2017/05/ChristTheRedeemer.jpg" alt="Christ the Redeemer" class="img2">
+    <img src="https://mymodernmet.com/wp/wp-content/uploads/2018/05/seven-wonders-of-the-world-18.jpg" alt="Colosseum" class="img3">
+    <img src="https://wallpaperset.com/w/full/9/7/b/157036.jpg" alt="Machu Picchu" class="img4">
+    <img src="https://2.bp.blogspot.com/-Nov4YvZh_9w/UPpI-O64T9I/AAAAAAAAADM/ZwKMISVtb1M/s1600/Great_Wall_of_China_02.jpg" alt="Great Wall of China" class="img5">
+    <img src="https://s1.it.atcdn.net/wp-content/uploads/2014/09/Chichen-Itza-1-of-32.jpg" alt="Chichen Itza" class="img6">
+    <img src="https://farm5.staticflickr.com/4028/5144919923_212290d4f7_o.jpg" alt="Petra" class="img7">
+  </div>
+</body>
+</html>
