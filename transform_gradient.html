@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradient-and-transforms</title>
+<style>
+  .parent{
+    margin: 20px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-image: url(https://wallpapers.com/images/hd/light-background-1ybjv68l2aw0lfxm.jpg);
+    height: 600px;
+    width: 50%;
+    position: fixed;
+  }
+  .pie1,.pie2,.pie3,.pie4 {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotate 5s linear infinite;
+  }
+  .pie1 {
+    background: conic-gradient(pink 60deg,skyblue 120deg,violet,lightcoral 240deg,
+    yellow 300deg,lightseagreen 360deg); 
+    top: 0;
+    left:0;
+  }
+  .pie2{
+    background: conic-gradient(aqua 60deg,burlywood  120deg,cornflowerblue 180deg,
+    darkmagenta 240deg,hotpink 300deg,slateblue 360deg);
+    bottom: 0;
+    left: 0;
+    
+  }
+  .pie3{
+    background: conic-gradient(violet 60deg,indigo 120deg,blue 180deg,
+    green 240deg,yellow 300deg,orange 330deg, red 360deg);
+    top: 0;
+    right: 0;
+  }
+  .pie4{
+    background: conic-gradient(palegreen 60deg,brown 120deg,azure 180deg,
+    lawngreen 240deg,darkorange 300deg,magenta 330deg, lightcoral 360deg);
+    bottom: 0;
+    right: 0;
+  }
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .pie5{
+    margin-left: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    background-image:radial-gradient( yellow,orange,red );
+  }
+  .pie5:hover{
+    margin-left: 210px;
+    background-image: repeating-radial-gradient( hotpink 1% ,chartreuse 2%,lightseagreen 3%,aquamarine 4%);
+    transform: rotate(360deg);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;   
+    color: black;
+    transition-duration: 0.5s;
+    animation: rotate 2s linear infinite;
+  }
+  
+</style>
+</head>
+<body>
+  <div class="parent">
+  <div class="pie1"></div>
+  <div class="pie2"></div>
+  <div class="pie3"></div>
+  <div class="pie4"></div>
+  <div class="pie5">
+    <p>Hover</p>
+  </div>
+  </div>
+</body>
+</html>
